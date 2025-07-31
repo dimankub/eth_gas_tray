@@ -1,22 +1,28 @@
 # ETH Gas Tray
 
-Минималистичная утилита для отображения стоимости газа Ethereum в системном трее.
+A minimalistic utility for displaying Ethereum gas prices in the system tray.
 
-## Описание
+## Description
 
-- Присутствует иконка в трее с текущим значением газа Slow (gwei).
-- При наведении отображаются значения Rapid, Normal, Slow.
-- Обновление цен — каждую минуту.
-- Если газ слишком высокий (>99 gwei), показывается стандартная иконка ETH.
+- Shows a tray icon with the current Slow gas price (gwei).
+- Hovering displays Rapid, Normal, and Slow gas values.
+- Prices update every minute.
+- If the gas price is too high (>99 gwei), the default ETH icon is shown.
 
-## Установка
+## Installation
 
-1. **Склонируйте репозиторий**
+1. **Clone the repository**
+```bash
 git clone https://github.com/dimankub/eth-gas-tray.git
 cd eth-gas-tray
+```
 
-2. **Установите зависимости**
+2. **Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-3. **Запустите приложение**
+3. **Run the application**
+```bash
 python eth_gas_tray.py
+```
