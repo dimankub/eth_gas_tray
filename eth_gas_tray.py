@@ -50,7 +50,11 @@ class GasTrayApp:
             tooltip = f"Ошибка: {e}"
         
         if slow is not None and slow <= 99:
-            icon = self.make_icon_with_text(str(slow))
+            if slow < 1:
+                text = f"{slow:.1f}"  # Одна цифра после запятой для значений < 1
+            else:
+                text = str(int(slow))  # Целое число для значений >= 1
+            icon = self.make_icon_with_text(text)
         else:
             if os.path.exists(ICON_PATH):
                 icon = QIcon(ICON_PATH)
